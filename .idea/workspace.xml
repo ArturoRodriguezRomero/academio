@@ -7,7 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca711425-fc7a-4c04-8d8e-272d88386038" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/LICENSE 2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea copia/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea copia/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea copia/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea copia/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea copia/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea copia/workspace.xml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -182,7 +187,7 @@
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="19" column="61" lean-forward="true" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
+              <caret line="19" column="61" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -433,7 +438,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534941336407" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534941536578" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -758,7 +763,7 @@
       <workItem from="1534923869364" duration="8772000" />
       <workItem from="1534934529674" duration="13000" />
       <workItem from="1534934599563" duration="1120000" />
-      <workItem from="1534940233535" duration="1003000" />
+      <workItem from="1534940233535" duration="1202000" />
     </task>
     <servers />
   </component>
@@ -795,7 +800,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38689000" />
+    <option name="totallyTimeSpent" value="38888000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1186,7 +1191,7 @@
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="61" lean-forward="true" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
+          <caret line="19" column="61" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
         </state>
       </provider>
     </entry>
