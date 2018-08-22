@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.autentia.academio.mapper.CourseMapper">
+
+    <select id="getAll" resultType="Course">
+        select * from courses where isActive = true;
+    </select>
+
+    <insert id="createNew" parameterType="com.autentia.academio.domain.Course">
+        insert into courses (isActive, title, hours, courseLevel, teacher, agendaFileName)
+        values (#{isActive}, #{title}, #{hours}, #{courseLevel}, #{teacher}, #{agendaFileName})
+    </insert>
+
+</mapper>

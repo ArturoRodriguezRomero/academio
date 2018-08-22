@@ -1,0 +1,11 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+academio,com.autentia.academio.service.teacher.imp,TeacherServiceImp,0,15,0,0,0,5,0,3,0,3
+academio,com.autentia.academio.service.storage.imp,StorageServiceImp,13,61,0,0,8,12,0,4,0,4
+academio,com.autentia.academio.web,CourseBean,114,0,0,0,38,0,16,0,16,0
+academio,com.autentia.academio.web,CourseLevelBean,19,0,0,0,6,0,5,0,5,0
+academio,com.autentia.academio.web,TeacherBean,19,0,0,0,6,0,5,0,5,0
+academio,com.autentia.academio.service.courseLevel.imp,CourseLevelServiceImp,0,15,0,0,0,5,0,3,0,3
+academio,com.autentia.academio.domain,Teacher,73,0,10,0,18,0,13,0,8,0
+academio,com.autentia.academio.domain,CourseLevel,64,0,10,0,13,0,12,0,7,0
+academio,com.autentia.academio.domain,Course,147,7,20,0,27,3,25,2,15,2
+academio,com.autentia.academio.service.course.imp,CourseServiceImp,0,32,0,0,0,10,0,3,0,3

@@ -1,0 +1,17 @@
+/Users/arturo.rodriguez/Downloads/academio-master/src/main/java/com/autentia/academio/service/teacher/TeacherService.java
+/Users/arturo.rodriguez/Downloads/academio-master/src/main/java/com/autentia/academio/web/CourseLevelBean.java
+/Users/arturo.rodriguez/Downloads/academio-master/src/main/java/com/autentia/academio/service/course/CourseService.java
+/Users/arturo.rodriguez/Downloads/academio-master/src/main/java/com/autentia/academio/domain/CourseLevel.java
+/Users/arturo.rodriguez/Downloads/academio-master/src/main/java/com/autentia/academio/domain/Teacher.java
+/Users/arturo.rodriguez/Downloads/academio-master/src/main/java/com/autentia/academio/service/teacher/imp/TeacherServiceImp.java
+/Users/arturo.rodriguez/Downloads/academio-master/src/main/java/com/autentia/academio/mapper/TeacherMapper.java
+/Users/arturo.rodriguez/Downloads/academio-master/src/main/java/com/autentia/academio/web/TeacherBean.java
+/Users/arturo.rodriguez/Downloads/academio-master/src/main/java/com/autentia/academio/service/storage/imp/StorageServiceImp.java
+/Users/arturo.rodriguez/Downloads/academio-master/src/main/java/com/autentia/academio/service/storage/StorageService.java
+/Users/arturo.rodriguez/Downloads/academio-master/src/main/java/com/autentia/academio/mapper/CourseMapper.java
+/Users/arturo.rodriguez/Downloads/academio-master/src/main/java/com/autentia/academio/service/course/imp/CourseServiceImp.java
+/Users/arturo.rodriguez/Downloads/academio-master/src/main/java/com/autentia/academio/service/courseLevel/imp/CourseLevelServiceImp.java
+/Users/arturo.rodriguez/Downloads/academio-master/src/main/java/com/autentia/academio/mapper/CourseLevelMapper.java
+/Users/arturo.rodriguez/Downloads/academio-master/src/main/java/com/autentia/academio/service/courseLevel/CourseLevelService.java
+/Users/arturo.rodriguez/Downloads/academio-master/src/main/java/com/autentia/academio/web/CourseBean.java
+/Users/arturo.rodriguez/Downloads/academio-master/src/main/java/com/autentia/academio/domain/Course.java
