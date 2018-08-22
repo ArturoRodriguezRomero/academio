@@ -1,6 +1,0 @@
-com/autentia/academio/service/course/imp/CourseServiceImpTest.class
-com/autentia/academio/service/courseLevel/imp/CourseLevelServiceImpTest.class
-com/autentia/academio/mapper/CourseLevelMapperIT.class
-com/autentia/academio/service/storage/imp/StorageServiceImpTest.class
-com/autentia/academio/mapper/CourseMapperIT.class
-com/autentia/academio/service/teacher/imp/TeacherServiceImpTest.class
