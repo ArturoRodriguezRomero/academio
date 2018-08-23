@@ -1,7 +1,5 @@
 package com.autentia.academio.domain;
 
-import java.util.Objects;
-
 public class Course {
     private int id;
     private Boolean isActive;
@@ -65,24 +63,5 @@ public class Course {
 
     public void setAgendaFileName(String agendaFileName) {
         this.agendaFileName = agendaFileName;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Course course = (Course) o;
-        return id == course.id &&
-                hours == course.hours &&
-                courseLevel == course.courseLevel &&
-                teacher == course.teacher &&
-                Objects.equals(isActive, course.isActive) &&
-                Objects.equals(title, course.title) &&
-                Objects.equals(agendaFileName, course.agendaFileName);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, isActive, title, hours, courseLevel, teacher, agendaFileName);
     }
 }

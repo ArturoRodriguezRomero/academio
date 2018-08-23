@@ -1,11 +1,14 @@
 package com.autentia.academio.domain;
 
-import java.util.Objects;
-
 public class CourseLevel {
 
     private int id;
     private String name;
+
+    public CourseLevel(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
     public String getName() {
         return name;
@@ -23,17 +26,4 @@ public class CourseLevel {
         this.name = name;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        CourseLevel that = (CourseLevel) o;
-        return id == that.id &&
-                Objects.equals(name, that.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name);
-    }
 }

@@ -6,6 +6,8 @@ import java.nio.file.Path;
 import java.util.List;
 
 import com.autentia.academio.domain.Course;
+import com.autentia.academio.exceptions.NotGeneratedPathException;
+import com.autentia.academio.exceptions.NotStoredException;
 import com.autentia.academio.mapper.CourseMapper;
 import com.autentia.academio.service.course.CourseService;
 
@@ -30,7 +32,7 @@ public class CourseServiceImp implements CourseService, Serializable {
     }
 
     @Override
-    public void createNew(Course course, InputStream inputStream, String fileName) {
+    public void createNew(Course course, InputStream inputStream, String fileName) throws NotGeneratedPathException, NotStoredException {
         Path path = storageService.generateStorePath(fileName);
         course.setAgendaFileName(path.toString());
         storageService.store(inputStream, path);

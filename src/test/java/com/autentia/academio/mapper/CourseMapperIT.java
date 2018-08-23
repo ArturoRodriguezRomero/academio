@@ -39,7 +39,7 @@ public class CourseMapperIT {
         sut.createNew(newCourse);
         List<Course> allAfter = sut.getAll();
 
-        assertTrue(all.size() + 1 == allAfter.size());
+        assertTrue(allAfter.size() == all.size() + 1);
     }
 
 }

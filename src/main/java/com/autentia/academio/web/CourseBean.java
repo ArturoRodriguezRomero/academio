@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.Serializable;
 import java.util.List;
+import java.util.logging.Logger;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
@@ -14,6 +15,9 @@ import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 
 import com.autentia.academio.domain.Course;
+import com.autentia.academio.exceptions.NotFoundException;
+import com.autentia.academio.exceptions.NotGeneratedPathException;
+import com.autentia.academio.exceptions.NotStoredException;
 import com.autentia.academio.service.course.CourseService;
 import com.autentia.academio.service.storage.StorageService;
 
@@ -25,6 +29,7 @@ import org.primefaces.model.UploadedFile;
 @ViewScoped
 public class CourseBean implements Serializable {
 
+    private transient Logger logger;
     private static final long serialVersionUID = 1L;
 
     @ManagedProperty("#{courseService}")
@@ -40,6 +45,7 @@ public class CourseBean implements Serializable {
     public void initialize() {
         courses = getAll();
         newCourse = new Course();
+        logger = Logger.getLogger(this.getClass().getName());
     }
 
     public List<Course> getAll() {
@@ -47,27 +53,35 @@ public class CourseBean implements Serializable {
     }
 
     public void createNew() throws IOException {
-        courseService.createNew(newCourse, agendaFile.getInputstream(), agendaFile.getFileName());
-        returnToIndex();
+        try {
+            courseService.createNew(newCourse, agendaFile.getInputstream(), agendaFile.getFileName());
+            returnToIndex();
+        } catch (NotGeneratedPathException e) {
+            logger.severe("NotGeneratedPathException");
+        } catch (NotStoredException e) {
+            logger.severe("NotStoredException");
+        }
     }
 
-    public void clientDownload(String filePath){
+    public void clientDownload(String filePath) throws IOException {
 
-        FileInputStream fileInputStream = storageService.clientDownload(filePath);
+        FileInputStream fileInputStream;
+        try {
+            fileInputStream = storageService.clientDownload(filePath);
+        } catch (NotFoundException e) {
+            logger.severe("NotFoundException");
+            return;
+        }
 
         FacesContext facesContext = FacesContext.getCurrentInstance();
         ExternalContext externalContext = facesContext.getExternalContext();
-        externalContext.responseReset();
 
+        externalContext.responseReset();
         externalContext.setResponseContentType("application/pdf");
         externalContext.setResponseHeader("Content-Disposition", "attachment; filename=\"" + FilenameUtils.getName(filePath) + "\"");
 
-        try {
-            OutputStream output = externalContext.getResponseOutputStream();
-            IOUtils.copy(fileInputStream, output);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        OutputStream output = externalContext.getResponseOutputStream();
+        IOUtils.copy(fileInputStream, output);
 
         facesContext.responseComplete();
     }
@@ -114,5 +128,9 @@ public class CourseBean implements Serializable {
 
     public void setStorageService(StorageService storageService) {
         this.storageService = storageService;
+    }
+
+    public void setLogger(Logger logger) {
+        this.logger = logger;
     }
 }

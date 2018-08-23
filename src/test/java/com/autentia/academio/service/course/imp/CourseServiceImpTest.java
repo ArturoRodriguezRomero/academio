@@ -1,6 +1,8 @@
 package com.autentia.academio.service.course.imp;
 
 import com.autentia.academio.domain.Course;
+import com.autentia.academio.exceptions.NotGeneratedPathException;
+import com.autentia.academio.exceptions.NotStoredException;
 import com.autentia.academio.mapper.CourseMapper;
 import com.autentia.academio.service.course.CourseService;
 import com.autentia.academio.service.storage.StorageService;
@@ -25,7 +27,7 @@ public class CourseServiceImpTest {
     }
 
     @Test
-    public void whenCreateNewCourseShouldCallMapper() {
+    public void whenCreateNewCourseShouldCallMapper() throws NotGeneratedPathException, NotStoredException {
         String fileName = "fileName";
         String pathGenerado = "path generado";
         InputStream inputStream = mock(InputStream.class);

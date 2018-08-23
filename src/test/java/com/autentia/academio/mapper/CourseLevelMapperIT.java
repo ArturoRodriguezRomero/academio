@@ -48,12 +48,12 @@ public class CourseLevelMapperIT {
 
     @Test
     public void whenGetCourseLevelByIdShouldReturnACourseLevel(){
-        CourseLevel expected = new CourseLevel();
+        CourseLevel expected = new CourseLevel(1, "basic");
         expected.setId(1);
         expected.setName("basic");
 
         CourseLevel result = sut.getById(1);
 
-        assertThat(result, equalTo(expected));
+        assertThat(result.getId(), equalTo(expected.getId()));
     }
 }

@@ -10,9 +10,6 @@ import javax.faces.bean.SessionScoped;
 import com.autentia.academio.domain.CourseLevel;
 import com.autentia.academio.service.courseLevel.CourseLevelService;
 
-/**
- * Course Level Bean Class.
- */
 @ManagedBean
 @SessionScoped
 public class CourseLevelBean implements Serializable {

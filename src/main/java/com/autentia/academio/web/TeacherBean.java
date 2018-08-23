@@ -10,9 +10,6 @@ import javax.faces.bean.SessionScoped;
 import com.autentia.academio.domain.Teacher;
 import com.autentia.academio.service.teacher.TeacherService;
 
-/**
- * Teacher Bean Class.
- */
 @ManagedBean
 @SessionScoped
 public class TeacherBean implements Serializable {

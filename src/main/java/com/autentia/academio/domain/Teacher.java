@@ -1,8 +1,5 @@
 package com.autentia.academio.domain;
 
-import java.util.Objects;
-
-
 public class Teacher {
 
     private int id;
@@ -32,17 +29,4 @@ public class Teacher {
         this.name = name;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Teacher teacher = (Teacher) o;
-        return id == teacher.id &&
-                Objects.equals(name, teacher.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name);
-    }
 }
