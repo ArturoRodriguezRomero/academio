@@ -4,14 +4,14 @@ pipeline {
        stage('Build') {
            agent {
                docker {
-                   image 'maven:3.5.0'
+                   image 'maven:3.5.4'
                    args '--network=plumbing_default'
                }
            }
            steps {
                configFileProvider(
                        [configFile(fileId: 'nexus', variable: 'MAVEN_SETTINGS')]) {
-                   sh 'mvn -s $MAVEN_SETTINGS clean deploy -DskipTests=true -B'
+                   sh 'mvn -s $MAVEN_SETTINGS clean install deploy -B'
                }
            }
        }
@@ -22,7 +22,7 @@ pipeline {
                }
            }
            steps {
-               sh 'cp target/petclinic.war /usr/share/jenkins/ref/petclinic/petclinic.war'
+               sh 'cp target/academio.war /usr/share/jenkins/ref/academio/academio.war'
            }
        }
        stage('Sonar') {
